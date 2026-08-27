@@ -1,11 +1,17 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "Java SDK",
   "description": "OpenJDK compiler, runtime and development tools.",
   "version": "25.0.3",
-  "image": "ghcr.io/containerpak/sdk-java:main",
-  "binaries": ["/usr/bin/java", "/usr/bin/javac", "/usr/bin/jar", "/usr/bin/javadoc", "/usr/bin/jshell"],
+  "image": "ghcr.io/containerpak/sdk-java@sha256:33fccfa382f4f1518b99ed114f383f14e3d85cbcd91fb03aadc40d75804add2f",
+  "binaries": [
+    "/usr/bin/java",
+    "/usr/bin/javac",
+    "/usr/bin/jar",
+    "/usr/bin/javadoc",
+    "/usr/bin/jshell"
+  ],
   "desktop_entries": [],
   "dependencies": [],
   "addons": [],
@@ -14,22 +20,21 @@
     "slot": "sdk.java",
     "mode": "exclusive",
     "exports": {
-      "path": ["/usr/bin"],
-      "environment": ["JAVA_HOME=/opt/jdk"]
+      "path": [
+        "/usr/bin"
+      ],
+      "environment": [
+        "JAVA_HOME=/opt/jdk"
+      ]
     }
   },
   "idle_time": 0,
   "override": {
-    "socketX11": false,
     "socketWayland": false,
     "socketPulseAudio": false,
-    "socketSessionBus": false,
-    "socketSystemBus": false,
     "socketSshAgent": true,
     "socketCups": false,
     "socketGpgAgent": true,
-    "socketAtSpiBus": false,
-    "socketBluetooth": false,
     "deviceDri": false,
     "deviceKvm": false,
     "deviceShm": false,
@@ -41,7 +46,12 @@
     "deviceAll": false,
     "notification": false,
     "openURI": false,
-    "filesystem": [{"path": "home", "access": "read-write"}],
+    "filesystem": [
+      {
+        "path": "home",
+        "access": "read-write"
+      }
+    ],
     "env": [],
     "network": true,
     "process": false,
@@ -49,7 +59,6 @@
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": []
+    "asRoot": false
   }
 }
