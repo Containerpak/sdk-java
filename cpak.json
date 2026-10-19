@@ -4,7 +4,7 @@
   "name": "Java SDK",
   "description": "OpenJDK compiler, runtime and development tools.",
   "version": "25.0.3",
-  "image": "ghcr.io/containerpak/sdk-java@sha256:8b4427be47cdba28ce452cf2357aa770efba9f612d8d4d6618844293092ff5e0",
+  "image": "ghcr.io/containerpak/sdk-java@sha256:3ab4f6190629c1605d0166475785484fcba82864071ec1e2bc0350a85ed2539f",
   "binaries": [
     "/usr/bin/java",
     "/usr/bin/javac",
